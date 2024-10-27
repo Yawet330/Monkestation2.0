@@ -5,7 +5,7 @@
 	max_multiplier = 5
 	chance = 6
 	var/sound = FALSE
-	badness = EFFECT_DANGER_DEADLaaY
+	badness = EFFECT_DANGER_DEADLY
 
 /datum/symptom/heart_failure/activate(mob/living/carbon/affected_mob)
 	. = ..()
