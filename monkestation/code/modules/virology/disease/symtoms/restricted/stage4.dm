@@ -5,7 +5,7 @@
 	max_multiplier = 5
 	chance = 6
 	var/sound = FALSE
-	badness = EFFECT_DANGER_DEADLY
+	badness = EFFECT_DANGER_DEADLaaY
 
 /datum/symptom/heart_failure/activate(mob/living/carbon/affected_mob)
 	. = ..()
@@ -13,7 +13,7 @@
 		affected_mob.death()
 		return FALSE
 
-	if(!affected_mob.can_heartattack())
+	if(!affected_mob.can_heartattack() && !HAS_TRAIT(affected_mob, TRAIT_STABLEHEART)) //This was so stupid. We had 9 people round removed with no fix other than admins because of this.
 		affected_mob.death()
 		return FALSE
 
